@@ -1,4 +1,8 @@
+# -*- coding: utf-8 -*-
 # only in ruby 1.9 
+
+# 13195 の素因数は 5, 7, 13, 29 である.
+# 600851475143 の素因数のうち最大のものを求めよ.
 
 require 'prime'
 
@@ -10,7 +14,7 @@ large = 600851475143
 small = 2
 
 while small < large do
-  small +=1
+  small += 1
   next unless small.prime?
   if large % small == 0 then
     large /= small 
