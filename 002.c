@@ -10,24 +10,45 @@
 /*     数列の項の値が400万より小さい, 偶数値の項の総和を求めよ. */
 /*     Note:この問題は最近更新されました. お使いのパラメータが正しいかどうか確認してください. */
 
+static int sumall = 0;
+
+void fib_1(int a, int b)
+{
+    /* int fib = 0; */
+    if(a >= 4000000)
+        return;
+    /* return b; */
+    if(a%2 == 0)
+        sumall += a;
+    fib_1(b,a+b);
+    return;
+}
+
+
 int main(void)
 {
-    unsigned int num         = 4000000;
-    unsigned int big         = 2;
-    unsigned int small       = 1;
-    unsigned int tmpforsmall = 0;
-    unsigned int sum         = big;
+    unsigned int sum ;
     
-    while(big < 4000000){
-        tmpforsmall = big;
-        big         = big+small;
-        small       = tmpforsmall;
-        if(big % 2)
-            continue;
-        sum += big;
-    }
-    printf("%d\n",sum);
-    return 0
+        fib_1(1,2);
+    
+    /* unsigned int num         = 4000000; */
+    /* unsigned int big         = 2; */
+    /* unsigned int small       = 1; */
+    /* unsigned int tmpforsmall = 0; */
+    /* unsigned int sum         = big; */
+    
+    /* while(big < 4000000){ */
+    /*     tmpforsmall = big; */
+    /*     big         = big+small; */
+    /*     small       = tmpforsmall; */
+    /*     if(big % 2) */
+    /*         continue; */
+    /*     sum += big; */
+    /* } */
+    /* printf("%d\n",sum); */
+    printf("%d\n",sumall);
+    return 0;
+    
 }
 
 
