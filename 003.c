@@ -7,6 +7,7 @@ int main(void)
 {
     long long int num = 600851475143;
     long long int i   = 0;
+    
     for(i=2;i<num;i++){
         if(num%2 == 0)
             continue;
