@@ -12,7 +12,6 @@ int main(void)
             continue;
         if(num%i == 0)
             num /= i
-
     }
     printf("%d\n",i);
     return 0;
