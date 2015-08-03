@@ -9,15 +9,12 @@ int main(void)
 {
     unsigned int num = 1000;
     unsigned int sum = 0;
-        
+
     while(--num){
         if( (num%3) && (num%5) ) continue;
         sum += num;
     }
+
     printf("%d\n",sum);
     return 0;
 }
-
-
-
-

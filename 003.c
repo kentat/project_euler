@@ -11,11 +11,9 @@ int main(void)
         if(num%2 == 0)
             continue;
         if(num%i == 0)
-            num /= i;
+            num /= i
+
     }
     printf("%d\n",i);
     return 0;
 }
-
-
-
